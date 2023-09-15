@@ -9,6 +9,7 @@ const newGroceryInput = document.getElementById('newGrocery')
 const addBtn = document.getElementById('addBtn')
 const anotherBtn = document.getElementById('anotherBtn')
 
+
 const createGroceryElement = grocery => {
   const groceryElement = document.createElement('li')
   groceryElement.innerText = grocery.value
@@ -36,15 +37,3 @@ addBtn.addEventListener('click', e => {
 })
 
 groceries.map(grocery => addGrocery(grocery))
-
-anotherBtn.addEventListener('click', e => {
-    e.preventDefault()
-    const value = newGroceryInput.value
-    if (value) {
-        const key = shortid.generate()
-        addGrocery({ key, value })
-        db.set(key, value)
-        window.open('http://walmart.com/search?q=' + newGroceryInput.value)
-        newGroceryInput.value = null
-      }
-})
