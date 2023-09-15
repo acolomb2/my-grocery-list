@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width-device-width, initial-scale=1.0" />
         
-        <title>My Grocery List 📝</title>
+        <title>Grocery List Tool</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,15 +16,20 @@
         <script type="module" src="script.js" defer></script>
     </head>
     <body>
-        <h1 class="title">My Grocery List 📝</h1>
+        <h1 class="title">Grocery List Tool</h1>
         <form class="newGroceryForm">
             <input id="newGrocery" autocomplete="off" type="text" placeholder="Add an item to your list" />
             <button id="addBtn" type="submit">Add</button>
+            <button id="searchBtn" type="submit" >Search & Add</button>
         </form>
 
+        
+        <div id="header"></div>
         <ul id="groceryList"></ul>
+        <div id="footer"></div>
 
         
+        <h1 style="margin-top: 1em">Search powered by Walmart</h1>
     </body>
 
 </html>

@@ -37,3 +37,15 @@ addBtn.addEventListener('click', e => {
 })
 
 groceries.map(grocery => addGrocery(grocery))
+
+searchBtn.addEventListener('click', e => {
+    e.preventDefault()
+    const value = newGroceryInput.value
+    if (value) {
+      const key = shortid.generate()
+      addGrocery({ key, value })
+      db.set(key, value)
+      window.open('http://walmart.com/search?q=' + newGroceryInput.value);
+      newGroceryInput.value = null
+    }
+  })
