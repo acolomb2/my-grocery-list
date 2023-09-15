@@ -86,3 +86,19 @@ body {
     background-color: var(--purplish);
     font-weight: bold;
 }
+
+#anotherBtn{
+    background-color: var(--accent);
+    color: var(--background);
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.25em 0.25em 0.25em 0.25em;
+}
+
+#anotherBtn:hover{
+    background-color: var(--purplish);
+    
+
+}
